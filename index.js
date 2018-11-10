@@ -1,5 +1,4 @@
-let language=document.getElementById("lang").value;
-let phrase=document.getElementById("phrase").value;
+
 const translate=document.getElementById("translate");
 const translations={
     spanish:{
@@ -26,6 +25,9 @@ const translations={
 }
 
 translate.addEventListener("click", ()=>{
+    document.getElementById("translation").innerHTML="";
+    let language=document.getElementById("lang").value;
+    let phrase=document.getElementById("phrase").value;
     let translation=translations[language][phrase];
     document.getElementById("translation").innerHTML=translation;
 })
